@@ -32,7 +32,7 @@ header p {
 }
 
 .hero {
-  background-color: blue;
+  background-color: grey;
   padding: 100px 15px;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -44,6 +44,71 @@ header p {
   background-color: #FFFFFF;
   text-align: center;
 }
+
+#flex-skills {
+  margin: 0px 5%;
+}
+
+.flex {
+  display: flex;
+  width:100%;
+}
+
+#row {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#column {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flex-item {
+  display: flex;
+  flex-direction: column;
+  background-color: yellow;
+  padding:10px 0 10px 30px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+#grid-skills {
+  margin: 0px 5%;
+}
+
+.grid {
+  display: grid;
+  background-color: aqua;
+  min-height: 700px;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+  "project-one project-one"
+  "project-two project-three"
+  ;
+}
+
+.wide-project {
+  padding: 30px 0 0 50px;
+}
+
+.project1 {
+  grid-area: project-one;
+  background-color: brown;
+}
+
+.project2 {
+  grid-area: project-two;
+  background-color: yellow;
+  padding: 30px 0 0 50px;
+}
+
+.project3 {
+  grid-area: project-three;
+  padding: 30px 0 0 50px;
+}
+
 button {
   padding: 15px;
   background-color: #373738;
@@ -52,6 +117,7 @@ button {
   border-radius: 4px;
 }
 footer {
+  margin-top: 50px;
   background-color: #373738;
   padding: 5px;
   color: white;
@@ -63,4 +129,17 @@ footer ul {
 footer li {
   display: inline-block;
   padding: 0px 7px;
+}
+
+@media only all and (max-width:1000px) {
+
+  .skills {
+    flex-direction: column!important;
+  }
+
+  .flex-item {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 30px;
+  }
 }
